@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="97" y="409" width="35" height="35"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                 <connections>
                                     <action selector="buttonIncrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQf-hf-VdE"/>
                                 </connections>
@@ -28,14 +28,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-Nl-Fy7">
                                 <rect key="frame" x="267" y="408" width="32" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
                                 <connections>
                                     <action selector="buttonDecrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YsK-pg-JdM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счетчика: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB6-zx-jp5">
-                                <rect key="frame" x="116" y="198" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-kI-Nvw">
+                                <rect key="frame" x="125" y="472" width="143" height="35"/>
+                                <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eraser.line.dashed" catalog="system" title="Очистить"/>
+                                <connections>
+                                    <action selector="buttonErase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6P-cn-TDw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="История изменений: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6P3-lF-R5l">
+                                <rect key="frame" x="16" y="557" width="361" height="199"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Значение счетчика: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB6-zx-jp5">
+                                <rect key="frame" x="74" y="190" width="244" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,21 +59,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UB6-zx-jp5" secondAttribute="trailing" constant="115" id="2P2-QQ-VWU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UB6-zx-jp5" secondAttribute="bottom" constant="599" id="9DC-Jr-vaU"/>
-                            <constraint firstItem="UB6-zx-jp5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="9Pc-bM-cRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UB6-zx-jp5" secondAttribute="bottom" constant="555" id="5Wm-Kq-33I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LvD-7X-lXL" secondAttribute="trailing" constant="261" id="AIG-c4-VVz"/>
-                            <constraint firstItem="UB6-zx-jp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="BPK-vR-9DB"/>
+                            <constraint firstItem="TgT-kI-Nvw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="413" id="BBs-Gr-5DQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UB6-zx-jp5" secondAttribute="trailing" constant="75" id="CD7-RK-Stn"/>
+                            <constraint firstItem="UB6-zx-jp5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="PLu-Jh-vVV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TgT-kI-Nvw" secondAttribute="bottom" constant="311" id="X16-2f-Auw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LvD-7X-lXL" secondAttribute="bottom" constant="374" id="Xz1-Yi-yb6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4qb-Nl-Fy7" secondAttribute="bottom" constant="375" id="acA-Bu-epx"/>
+                            <constraint firstItem="TgT-kI-Nvw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="c1I-NR-T4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TgT-kI-Nvw" secondAttribute="trailing" constant="125" id="cLG-iF-z8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6P3-lF-R5l" secondAttribute="trailing" constant="16" id="eQl-Im-5yo"/>
+                            <constraint firstItem="6P3-lF-R5l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="498" id="ecS-tQ-1eM"/>
                             <constraint firstItem="LvD-7X-lXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="fVW-Wc-Qej"/>
                             <constraint firstItem="4qb-Nl-Fy7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="267" id="i93-hx-cD8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6P3-lF-R5l" secondAttribute="bottom" constant="62" id="kCp-vv-Dko"/>
+                            <constraint firstItem="UB6-zx-jp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="lyh-MV-d1o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4qb-Nl-Fy7" secondAttribute="trailing" constant="94" id="mVa-C1-fP4"/>
+                            <constraint firstItem="6P3-lF-R5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r8V-LE-F1n"/>
                             <constraint firstItem="4qb-Nl-Fy7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="349" id="rEc-Cg-nmS"/>
                             <constraint firstItem="LvD-7X-lXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="wY6-EY-VN5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterChangeLogTextView" destination="6P3-lF-R5l" id="HPl-2Q-Nlz"/>
                         <outlet property="counterLabel" destination="UB6-zx-jp5" id="352-68-myI"/>
                     </connections>
                 </viewController>
@@ -67,6 +92,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eraser.line.dashed" catalog="system" width="128" height="96"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
