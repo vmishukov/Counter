@@ -21,14 +21,20 @@
                                 <color key="tintColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <connections>
+                                    <action selector="buttonIncrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQf-hf-VdE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-Nl-Fy7">
                                 <rect key="frame" x="267" y="408" width="32" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <connections>
+                                    <action selector="buttonDecrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YsK-pg-JdM"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Значение счетчика: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB6-zx-jp5">
-                                <rect key="frame" x="115" y="194" width="162" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счетчика: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB6-zx-jp5">
+                                <rect key="frame" x="116" y="198" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,11 +43,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UB6-zx-jp5" secondAttribute="trailing" constant="115" id="2P2-QQ-VWU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UB6-zx-jp5" secondAttribute="bottom" constant="599" id="9DC-Jr-vaU"/>
                             <constraint firstItem="UB6-zx-jp5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="9Pc-bM-cRO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LvD-7X-lXL" secondAttribute="trailing" constant="261" id="AIG-c4-VVz"/>
-                            <constraint firstItem="UB6-zx-jp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Iul-Vc-RMO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UB6-zx-jp5" secondAttribute="trailing" constant="126" id="NJp-Pk-UPI"/>
+                            <constraint firstItem="UB6-zx-jp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="BPK-vR-9DB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LvD-7X-lXL" secondAttribute="bottom" constant="374" id="Xz1-Yi-yb6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4qb-Nl-Fy7" secondAttribute="bottom" constant="375" id="acA-Bu-epx"/>
                             <constraint firstItem="LvD-7X-lXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="fVW-Wc-Qej"/>
@@ -51,10 +57,13 @@
                             <constraint firstItem="LvD-7X-lXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="wY6-EY-VN5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="UB6-zx-jp5" id="352-68-myI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="-34"/>
+            <point key="canvasLocation" x="41.984732824427482" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
